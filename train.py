@@ -180,7 +180,7 @@ def train():
         loss.backward()
         optimizer.step()
         t1 = time.time()
-        loc_loss += loss_l.data[0]
+        loc_loss += loss_l.item()
         conf_loss += loss_c.data[0]
 
         if iteration % 10 == 0:
